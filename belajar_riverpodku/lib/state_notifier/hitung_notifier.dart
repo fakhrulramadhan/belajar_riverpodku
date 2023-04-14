@@ -1,7 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HitungNotifier extends StateNotifier<int> {
-  HitungNotifier() : super(0); //kasih nilai awalan 0
+//kalau mau bisa pembagian, tipe datanya harus double
+class HitungNotifier extends StateNotifier<double> {
+  HitungNotifier() : super(0.0); //kasih nilai awalan 0
 
   void tambah() {
     state++;
@@ -12,10 +13,10 @@ class HitungNotifier extends StateNotifier<int> {
   }
 
   void kalidua() {
-    state * 2;
+    state = state * 2;
   }
 
   void bagidua() {
-    state / 2;
+    state = state / 2;
   }
 }
